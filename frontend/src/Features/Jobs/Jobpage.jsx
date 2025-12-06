@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
+const Jobpage = () => {
   return (
     <div>
-      footer agya
+      jobpage
     </div>
   )
 }
 
-export default Footer
+export default Jobpage

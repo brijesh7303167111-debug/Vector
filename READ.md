@@ -4,9 +4,7 @@ so on 23 nov
 
 
 
-on 24 nov 
-    goals --
-         navbar
-         sidebar
-         footer
-         icons and header and all
+so we are back on 7 dec ( - hours)
+   -- now here we gonna start it
+   -- complex structure set uped
+   -- routing done
