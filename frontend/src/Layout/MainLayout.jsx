@@ -1,8 +1,8 @@
 // src/layouts/MainLayout.jsx
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 
 

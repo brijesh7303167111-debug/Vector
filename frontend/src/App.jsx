@@ -12,6 +12,19 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import MyProfilePage from "./Features/Profile/MyProfilePage";
 import MainLayout from "./Layout/MainLayout";
 
+
+// color svheme 
+//     -- https://colorhunt.co/palette/22283131363f76abaeeeeeee
+//     -- https://colorhunt.co/palette/00546101879000b7b5f4f4f4
+// #222831 — Charcoal Dark — Main background for entire app.
+// #31363F — Slate Dark — Cards, panels, navbar, sidebar surfaces.
+// #00B7B5 — Teal Primary — Primary buttons, CTAs, active links, highlights.
+// #018790 — Deep Teal — Button hover, selected states, emphasis accents.
+// #005461 — Teal Dark — Strong borders, active button state, section dividers.
+// #76ABAE — Soft Muted Teal — Input focus, subtle highlights, secondary accents.
+// #FFFFFF — Pure White — Headings, icons, primary text elements.
+
+
 export default function App() {
   return (
     <BrowserRouter>
