@@ -35,7 +35,7 @@ export default function Desktopnav({ onOpenProfile }) {
       {/* Right side: profile */}
       <div className="ml-6 absolute right-8 ">
         <button onClick={onOpenProfile} className="flex items-center gap-2 p-1 rounded-full hover:bg-white/5">
-          <img src="/avatar-placeholder.png" alt="avatar" className="h-9 w-9 rounded-full object-cover border border-white/10" />
+          <img src="/avatar-placeholder.png" alt="avatar" className="h-9 w-9 rounded-full object-cover border-2 border-white" />
         </button>
       </div>
     </nav>

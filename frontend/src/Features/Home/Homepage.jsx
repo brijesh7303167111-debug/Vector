@@ -14,12 +14,11 @@ export default function HomePage() {
 
         <div className="mt-4 flex gap-3">
           <Link to="/jobs" className="inline-block px-4 py-2 bg-blue-600 text-white rounded">Job Search</Link>
-          <Link to="/chat" className="inline-block px-4 py-2 border rounded">Open Chat</Link>
+          <Link to="/messaging" className="inline-block px-4 py-2 border rounded">Open Chat</Link>
         </div>
       </div>
 
       
-       <MagicLoader size={240} particleCount={2} speed={1} hueRange={[120, 220]} />
           
     </section>
   );

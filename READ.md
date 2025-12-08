@@ -13,3 +13,8 @@ so we are back on 7 dec ( 3hours)
 8 dec ( 2 hours)
     --navbar done
     --sidebar done
+
+9 dec (2 hours)
+    --not found page
+    --all navigation
+    --login half

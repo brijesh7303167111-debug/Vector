@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState, Suspense } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./components/Logo";
 import MagicLoader from "../../Lightwind/MagicLoader";
+import Loadernav from "../../Lightwind/Loadernav";
 
 // breakpoint helpers
 const isDesktopQuery = "(min-width: 1024px)"; // lg and up
@@ -93,7 +94,7 @@ export default React.memo(function Navbar() {
         </div>
 
         {/* Render the correct nav inside Suspense; fallback is minimal loader */}
-        <Suspense fallback={<div className="w-48 flex justify-center"><MagicLoader size={36} particleCount={1} /></div>}>
+        <Suspense fallback={<div className="w-48 flex justify-center"><Loadernav/></div>}>
           <NavComponent {...navProps} />
         </Suspense>
 

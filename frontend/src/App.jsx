@@ -4,13 +4,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MagicLoader from "./Lightwind/MagicLoader";
 import NotFound from "./Lightwind/NotFound";
 import AuthPage from "./Features/Auth/AuthPage";
-import AuthLayout from "./Layout/AuthLayout";
 import HomePage from "./Features/Home/Homepage";
 import Jobpage from "./Features/Jobs/Jobpage";
-import Chatpage from "./Features/Chat/Chatpage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import MyProfilePage from "./Features/Profile/MyProfilePage";
 import MainLayout from "./Layout/MainLayout";
+import Networkpage from "./Features/Network/Networkpage";
+import Notisficationpage from "./Features/Notisfication/Notisficationpage";
+import Messageingpage from "./Features/Messaging/Messageingpage";
+import Eventspage from "./Features/Events/Eventspage";
+import AuthLayout from "./Layout/AuthLayout";
 
 
 // color svheme 
@@ -41,9 +44,34 @@ export default function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
             <Route path="jobs" element={<Jobpage />} />
-            <Route path="chat" element={<Chatpage />} />
-
-          
+            <Route path="events" element={<Eventspage />} />
+            
+            
+            
+            <Route
+              path="network"
+              element={
+                <ProtectedRoute>
+                  <Networkpage  />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="notifications"
+              element={
+                <ProtectedRoute>
+                  <Notisficationpage  />
+                </ProtectedRoute>
+              }
+            />
+             <Route
+              path="messaging"
+              element={
+                <ProtectedRoute>
+                  <Messageingpage  />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="myprofile"
               element={
@@ -52,12 +80,30 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
+             <Route
+              path="find-mates"
+              element={
+                <ProtectedRoute>
+                  <Notisficationpage  />
+                </ProtectedRoute>
+              }
+            />
+            {/* <Route
+              path="auth"
+              element={
+                
+                  <AuthPage/>
+              
+              }
+            /> */}
+
+
+             
 
              <Route path="*" element={<NotFound />} />
       
           </Route>
 
-          {/* Auth routes */}
           <Route path="/auth" element={<AuthLayout />}>
             <Route index element={<AuthPage />} />
             
@@ -65,6 +111,7 @@ export default function App() {
 
           {/* fallback */}
           <Route path="*" element={<NotFound />} />
+          
         </Routes>
       </Suspense>
     </BrowserRouter>

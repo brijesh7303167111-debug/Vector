@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Chatpage = () => {
+const Eventspage = () => {
   return (
     <div>
-      chat
+      events
     </div>
   )
 }
 
-export default Chatpage
+export default Eventspage

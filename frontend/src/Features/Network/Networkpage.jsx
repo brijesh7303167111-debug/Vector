@@ -2,7 +2,7 @@ import React from 'react'
 
 const Networkpage = () => {
   return (
-    <div>
+    <div className='mt-47' >
       network
     </div>
   )
