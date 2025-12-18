@@ -22,7 +22,7 @@ export default function Mobilenav({ open, setOpen }) {
         className="md:hidden p-2 rounded-md hover:bg-white/5"
         aria-label="Toggle menu"
       >
-        <svg className="h-6 w-6 text-slate-300" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>
+        <svg className="h-6 w-6 text-subtle" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>
       </button>
 
       <div className={`fixed inset-0 z-50 transform transition-transform md:hidden ${open ? "translate-x-0" : "translate-x-full"}`} aria-hidden={!open}>
@@ -43,7 +43,7 @@ export default function Mobilenav({ open, setOpen }) {
                 to={to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-3 py-2 rounded-md ${isActive ? "bg-white/5 text-teal-300" : "text-slate-200 hover:bg-white/3"}`
+                  `flex items-center gap-3 px-3 py-2 rounded-md ${isActive ? "bg-white/5 text-teal300" : "text-subtle hover:bg-white/3"}`
                 }
               >
                 <Icon className="h-6 w-6" />
@@ -53,8 +53,8 @@ export default function Mobilenav({ open, setOpen }) {
           </nav>
 
           <div className="mt-6 border-t border-white/5 pt-4">
-            <NavLink to="/auth/login" onClick={() => setOpen(false)} className="block px-3 py-2 rounded-md text-slate-200">Sign in</NavLink>
-            <NavLink to="/auth/signup" onClick={() => setOpen(false)} className="block mt-2 px-3 py-2 rounded-md bg-teal-500 text-white text-center">Create account</NavLink>
+            <NavLink to="/auth" onClick={() => setOpen(false)} className="block px-3 py-2 rounded-md text-slate-200">Sign in</NavLink>
+            <NavLink to="/auth" onClick={() => setOpen(false)} className="block mt-2 px-3 py-2 rounded-md bg-teal-500 text-white text-center">Create account</NavLink>
           </div>
         </aside>
       </div>

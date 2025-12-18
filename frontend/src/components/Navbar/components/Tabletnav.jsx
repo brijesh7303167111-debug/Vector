@@ -13,7 +13,7 @@ const ITEMS = [
   { to: "/find-mates", Icon: FindIcon, alt: "Find Teammates" },
 ];
 
-export default function Tabletnav({ onOpenProfile }) {
+export default function Tabletnav({ onOpenProfile , }) {
   return (
     <>
     <nav className="hidden md:flex lg:hidden items-center gap-4">
@@ -22,7 +22,7 @@ export default function Tabletnav({ onOpenProfile }) {
           key={to}
           to={to}
           className={({ isActive }) =>
-            `p-2 rounded-md ${isActive ? "text-teal-400 bg-white/5" : "text-slate-300 hover:text-teal-300 hover:bg-white/3"}`
+            `p-2 rounded-md ${isActive ? "text-teal400 bg-white/5" : "text-subtle hover:text-teal300 hover:bg-white/3"}`
           }
           title={alt}
         >
@@ -34,7 +34,7 @@ export default function Tabletnav({ onOpenProfile }) {
         <button onClick={onOpenProfile} className="flex items-center gap-2 p-1 rounded-full hover:bg-white/5">
           <img src="/avatar-placeholder.png" alt="avatar" className="h-7 w-7 rounded-full object-cover border-2 border-white" />
         </button>
-      </div>
+      </div>zz
 
     </nav>
 

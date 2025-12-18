@@ -1,9 +1,12 @@
 // src/features/home/HomePage.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import MagicLoader from "../../Lightwind/MagicLoader";
+import api from "../../api/axios";
 
 export default function HomePage() {
+ 
+
   return (
     <section className="space-y-6">
       <div className="rounded-lg bg-white shadow p-6">

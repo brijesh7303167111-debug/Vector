@@ -10,6 +10,8 @@ const isDesktopQuery = "(min-width: 1024px)"; // lg and up
 const isTabletQuery = "(min-width: 768px) and (max-width: 1023.98px)"; // md
 
 function useBreakpoint() {
+
+  
   // 'desktop' | 'tablet' | 'mobile'
   const get = () => {
     if (typeof window === "undefined") return "desktop";
@@ -37,7 +39,7 @@ function useBreakpoint() {
       desktopMq.addEventListener?.("change", handler);
       tabletMq.addEventListener?.("change", handler);
     } catch {
-      // Safari fallback
+      
       desktopMq.addListener?.(handler);
       tabletMq.addListener?.(handler);
     }
@@ -65,9 +67,7 @@ export default React.memo(function Navbar() {
 
   const bp = useBreakpoint();
 
-  // Lazy-load only the nav component required for this breakpoint.
-  // We memoize the Lazy component so React doesn't recreate it on every render.
-  const NavComponent = useMemo(() => {
+ const NavComponent = useMemo(() => {
     if (bp === "desktop") {
       return React.lazy(() => import("./components/Desktopnav"));
     }
@@ -87,7 +87,7 @@ export default React.memo(function Navbar() {
       : { open: mobileOpen, setOpen: setMobileOpen };
 
   return (
-    <header className="w-full bg-[#0F172A] border-b border-[#111827]">
+    <header className="w-full bg-darkbg border-b border-[#111827]">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Logo compact={false} />
@@ -97,6 +97,7 @@ export default React.memo(function Navbar() {
         <Suspense fallback={<div className="w-48 flex justify-center"><Loadernav/></div>}>
           <NavComponent {...navProps} />
         </Suspense>
+
 
         {/* keep a small area for mobile hamburger (if mobile) or profile on desktop is inside Desktopnav */}
         <div className="hidden md:block items-center gap-2">

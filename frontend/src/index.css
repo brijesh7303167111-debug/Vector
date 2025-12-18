@@ -1,2 +1,40 @@
 @import 'tailwindcss';
 @plugin 'lightswind/plugin';
+
+
+
+@theme {
+  /* Define your custom colors here */
+  /* format: --color-<name>: <value>; */
+  --color-darkbg:#0F172A;
+  --color-bg: #222831;
+  --color-card: #31363F;
+  --color-primary: #00B7B5;
+  --color-primaryHover: #018790;
+  --color-border: #005461;
+  --color-muted: #76ABAE;
+  --color-white: #FFFFFF;
+  --color--teal400 :#2dd4bf;
+  --color-teal300:#5eead4;
+  --color-subtle: #E6F0EF;
+  --color-secondaryText: #BFDAD9;
+  --color-darkTextOnPrimary: #082727;
+  --color-danger: #FF0000;
+}
+
+:root {
+  --color-darkbg:#0F172A;
+  --color-bg: #222831;
+  --color-card: #31363F;
+  --color-primary: #00B7B5;
+  --color-primaryHover: #018790;
+  --color--teal400 :#2dd4bf;
+  --color-teal300:#5eead4;
+  --color-border: #005461;
+  --color-muted: #76ABAE;
+  --color-white: #FFFFFF;
+  --color-subtleText: #E6F0EF;
+  --color-secondaryText: #BFDAD9;
+  --color-darkTextOnPrimary: #082727;
+  --color-danger: #FF0000;
+}
